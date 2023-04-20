@@ -1,4 +1,4 @@
-![momenTUM banner](resources/logo.png)
+![momenTUM banner](resources/banner.png)
 
 # Introduction
 
