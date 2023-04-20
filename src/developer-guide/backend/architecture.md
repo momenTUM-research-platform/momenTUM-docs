@@ -20,7 +20,7 @@ The following diagram explains the flow of the backend server.
     https://{{BASE_URL}}/redcap/api/help/index.php?content=default
     ```
 ## Flow Diagram
-![](../../../theme/backend.png)
+![](../../resources/backend.png)
 
 
 
