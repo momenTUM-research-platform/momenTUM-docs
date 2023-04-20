@@ -1,4 +1,4 @@
-- [Introduction(./introduction.md)
+- [Introduction](./introduction.md)
 
 # Developer Guide
 - [Architecture](./developer-guide/architecture.md)
