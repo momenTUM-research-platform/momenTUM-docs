@@ -14,7 +14,7 @@
     - [Deployment](./developer-guide/designer/deployment.md)
     - [Interfaces](./developer-guide/designer/interfaces.md)
     - [Contributing](./developer-guide/designer/contributing.md)
-- [Mobile App](./developer-guide/mobile-app/README.md)
+- [Mobile App](./developer-guide/mobile-app/overview.md)
     - [Components](./developer-guide/mobile-app/components.md)
     - [Architecture](./developer-guide/mobile-app/architecture.md)
     - [Deployment](./developer-guide/designer/deployment.md)
