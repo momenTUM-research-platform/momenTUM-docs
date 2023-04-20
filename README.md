@@ -1,5 +1,7 @@
 # momenTUM-docs: Documentation of the momenTUM Research Platform
 
+![momenTUM banner](src/resources/banner.png)
+
 ## About
 This repository contains the documentation of the momenTUM Research Platform. The documentation is written using [mdBook](https://rust-lang.github.io/mdBook/).
 
