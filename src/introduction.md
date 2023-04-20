@@ -11,6 +11,3 @@ Clinical, biomedical, psychological and other studies with human participants of
 ## Developers
 
 The momenTUM Research Platform is developed at the [Technical University of Munich](https://www.tum.de/) in the [Professorship of Chronobiology & Health](https://www.sg.tum.de/en/chronobiology/home/) and at the [Max Planck Institute for Biological Cybernetics](https://www.kyb.tuebingen.mpg.de/en) under the supervision of Prof. Dr. Manuel Spitschan. The developer team consists of Constantin Goeldel, Blen Daniel Assefa and Marco Ma.
-
-## System Sketch
-![system-sketch](./resources/system-components-sketch.svg)
