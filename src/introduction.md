@@ -1,3 +1,5 @@
+![momenTUM banner](resources/logo.png)
+
 # Introduction
 
 ## Background
