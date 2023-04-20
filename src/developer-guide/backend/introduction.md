@@ -1,7 +1,0 @@
-# introduction
-
-This is a backend documentation for the momenTUM project. This backend contains explanations of the `api` and the interactions with the `frontend: Designer` for a custom creation of a `Study` and the `Mobile App: momenTUM` for data gathering and storing. 
-
-From the `Designer` frontend peprspective, the `api` have several routes that help stores the created `Study` and other metadata in the `MongoDB` database. During which, it also retrives a `URL` for the location of the study in the database. In the creating of a study, the researcher can choose where to store the responses from a the mobile app. The researcher has the option to create a `Redcap` project for it or can have an external storage space. If they have an external storage space then, they would need to set the variable of `post-url` of the study to that location when they are creating the study via the `Designer`. 
-
-From the researchers that use the Redcap configuration already set up for storing the records, the `MomenTUM` mobile app sends the collected data by calling an endpoint from the `api`. This will store a metadata in the `MongoDB` and the actual reponse in the `Redcap`. The metadata of every response is stored in the `Mongodb`, depending on the fact that the study already exists there. Thus, the responses collected by the `Mobile App: momenTUM` is used for creating a metadata that is stored in the `MongoDB` and/or `Redcap` depending on the researchers' preference.
