@@ -1,17 +1,15 @@
 # Summary
 
-[Introduction](introduction.md)
-
 # Developer Guide
 - [Architecture](./developer-guide/architecture.md)
 
-- [backend](./developer-guide/backend/overview.md)
+- [Backend](./developer-guide/backend/overview.md)
     - [Contribution](./developer-guide/backend/contribution.md)
     - [Components](./developer-guide/backend/components.md)
     - [Architecture](./developer-guide/backend/architecture.md)
     - [Deployment](./developer-guide/backend/deployment.md)
     - [Interfaces](./developer-guide/backend/interfaces.md)
-- [designer](./developer-guide/designer/overview.md)
+- [Designer](./developer-guide/designer/overview.md)
     - [Contribution](./developer-guide/designer/contribution.md)
     - [Components](./developer-guide/designer/components.md)
     - [Architecture](./developer-guide/designer/architecture.md)
