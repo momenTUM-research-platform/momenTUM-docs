@@ -17,8 +17,10 @@
 - [Mobile App](./developer-guide/mobile-app/overview.md)
     - [Components](./developer-guide/mobile-app/components.md)
     - [Architecture](./developer-guide/mobile-app/architecture.md)
-    - [Deployment](./developer-guide/designer/deployment.md)
+    - [Deployment](./developer-guide/mobile-app/deployment.md)
     - [Interfaces](./developer-guide/mobile-app/interfaces.md)
+        - [Study](./developer-guide/mobile-app/interfaces_study.md)
+        - [Data Collection](./developer-guide/mobile-app/interfaces_server.md)
     - [Contributing](./developer-guide/mobile-app/contributing.md)
 # Researcher Guide
 - [Getting started](./researcher-guide/getting_started.md)
