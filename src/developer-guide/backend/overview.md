@@ -12,7 +12,8 @@ We recommend getting familiar with these technologies before developing for this
 
 ## Chapters
 - [Architecture](./architecture.md)
-- [Components](./components.md)
+- [Modules](./modules.md)
+- [Routes](./routes.md)
 - [Deployment](./deployment.md)
 - [Interfaces](./interfaces.md)
 - [Contributing](./contributing.md)

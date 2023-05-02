@@ -4,25 +4,31 @@ The momentum platform consists of [5 subsystems](#subsystems). 3 of them are dev
 
 ## Subsystems
 
-### [Designer](./designer/overview.md)
-
-Used by researcher to create momentum studies.
-
 ### [Backend](./backend/overview.md)
 
-Handles the interaction with the momentum server.
+Handles the interaction with the momentum server. Go to the chapter for its documentation.
+> [link to the Backend chapter](./backend/overview.md)
 
-### [Mobile app](./mobile-app/overview.md)
+### [Designer](./designer/overview.md)
 
-Used by study participants to complete tasks. Tasks are defined in momentum studies.
+Used by researcher to create momentum studies. Go to the chapter for its documentation.
+> [link to the Designer chapter](./designer/overview.md)
 
-### [REDCap instance](https://www.project-redcap.org/)
 
-Used by researchers to monitor and download the collected data.
+### [Mobile App](./mobile-app/overview.md)
 
-### [MongoDB instance](https://www.mongodb.com/de-de)
+Used by study participants to complete tasks. Tasks are defined in momentum studies. Go to the chapter for its documentation.
+> [link to the Mobile App chapter](./designer/overview.md)
 
-Backend data storage. Mainly used for mappings between studies and REDCap projects.
+### REDCap instance
+
+Used by researchers to monitor and download the collected data. Go to their website for more information.
+> [link to the REDCap website](https://www.project-redcap.org/)
+
+### MongoDB instance
+
+Backend data storage. Mainly used for mappings between studies and REDCap projects. Go to their website for more information.
+> [link to the MongoDB website](https://www.mongodb.com/de-de)
 
 ## Sketch
 

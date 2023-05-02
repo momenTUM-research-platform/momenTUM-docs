@@ -1,7 +1,8 @@
-# Components
+# API
 
-## Routes
-These are `Routes` that the backend provi. They define the endpoints that a researcher or a participant can use to interact with the backend and the website. The following routes are defined:
+The Backend implements a set of **HTTP Routes**.
+They serve as API endpoints that can be used by other applications to interact with the backend.
+The following routes are defined:
 
 `GET`
 - `/api/docs/<path..>`: This route is used to retrieve the documentation for the API. The <path..> parameter is used to specify the path to the documentation file.
