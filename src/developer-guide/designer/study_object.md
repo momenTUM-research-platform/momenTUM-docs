@@ -1,36 +1,32 @@
-# Study File
+# Study Object
 
-The study file is modelled using a class diagram.
-Depending on the programming language, it has been implemented as `interface`(TypeScript) and `Struct`(Rust).
-The chart was created using [lucid.app](https://lucid.app)
-> [edit chart](https://lucid.app/lucidchart/0254693e-6e79-4ecf-889b-467fbcc3ad28/edit?viewport_loc=-1386%2C-525%2C6983%2C3993%2CHWEp-vi-RSFO&invitationId=inv_775f17bc-cc7b-4de3-9402-f161610e2cef)
-
-![study-interface-class-diag](../../resources/images/momentum%20study%20interface.svg)
+The study object is a complex object with key value pairs according to a certain protocol. The protocol is modelled using a class diagram.
+Depending on the programming language, it has been implemented as `interface`(TypeScript) and `Struct` (Rust).
 
 ## mermaid diagram
 
 ```mermaid
     classDiagram
         Study "1" *-- "1..*" Module
-        Study *-- Properties
+        Study "1" *-- "1" Properties
 
-        Module *-- Alert
-        Module *-- Time
-        Module *-- Graph
-        Module --> PvtBody
-        Module --> SurveyBody
+        Module "1" *-- "1" Alert
+        Module "1" *-- "1" Time
+        Module "1" *-- "1" Graph
+        Module "1" --> "0..1" PvtBody
+        Module "1" --> "0..1" SurveyBody
 
-        SurveyBody --> Section
-        Section --> Question
-        Question --> Instruction
-        Question --> YesNo
-        Question --> Text
-        Question --> DateTime
-        Question --> Slider
-        Question --> Multi
-        Question --> File
-        Question --> Media
-        Question --> External
+        SurveyBody "1" --> "1..*" Section
+        Section "1" --> "1..*" Question
+        Question "1" --> "0..1" Instruction
+        Question --> "0..1" YesNo
+        Question --> "0..1" Text
+        Question --> "0..1" DateTime
+        Question --> "0..1" Slider
+        Question --> "0..1" Multi
+        Question --> "0..1" File
+        Question --> "0..1" Media
+        Question --> "0..1" External
 
         class Study {
             properties: Properties;
@@ -118,7 +114,7 @@ The chart was created using [lucid.app](https://lucid.app)
         class Question {
             id: string;
             text: string;
-            type:
+            body:
                 | Instruction
                 | Datetime
                 | Multi
