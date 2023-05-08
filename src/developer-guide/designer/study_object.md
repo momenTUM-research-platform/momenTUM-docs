@@ -31,7 +31,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         class Study {
             <<interface>> 
             properties: Properties,
-            module: Module[],
+            modules: Module[],
         }
 
         class Module {
