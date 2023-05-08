@@ -11,7 +11,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         Study "1" *-- "1" Properties
 
         Module "1" *-- "1" Alert
-        Module "1" *-- "1" Time
+        Alert "1" *-- "1..*" Time
         Module "1" *-- "1" Graph
         Module "1" --> "0..1" PvtBody
         Module "1" --> "0..1" SurveyBody
@@ -29,159 +29,179 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         Question --> "0..1" External
 
         class Study {
-            properties: Properties;
-            module: Module[];
+            <<interface>> 
+            properties: Properties,
+            module: Module[],
         }
 
         class Module {
-            name: string;
-            submit_text: 
-            string;condition: string;
-            alerts: Alerts[];
-            graph: Graph;
-            id: string;
-            unlock_after: string[];
-            shuffle: boolean;
-            body: SurveyBody | PvtBody;
+            <<interface>> 
+            type: 'pvt' | 'survey',
+            name: string,
+            submit_text: string,
+            condition: string,
+            alerts: Alert[],
+            graph: Graph,
+            id: string,
+            unlock_after: string[],
+            shuffle: boolean,
+            body: SurveyBody | PvtBody,
         }
 
         class Properties {
-            study_id: string;
-            study_name: string;
-            instructions: string;
-            banner_url: string;
-            support_email: string;
-            support_url: string;
-            ethics: string;
-            pls: string;
-            created_by: string;
-            empty_msg: string;
-            post_url: string;
-            conditions: string[];
-            cache: boolean;
+            <<interface>> 
+            study_id: string,
+            study_name: string,
+            instructions: string,
+            banner_url: string,
+            support_email: string,
+            support_url: string,
+            ethics: string,
+            pls: string,
+            created_by: string,
+            empty_msg: string,
+            post_url: string,
+            conditions: string[],
+            cache: boolean,
         }
 
         class Alert {
-            title: string;
-            message: string;
-            start_offset: number;
-            duration: number;
-            times: Time[];
-            random: boolean;
-            random_interval: number;
-            sticky: boolean;
-            sticky_label: string;
-            timeout: boolean;
-            timeout_after: number;
+            <<interface>> 
+            title: string,
+            message: string,
+            start_offset: number,
+            duration: number,
+            times: Time[],
+            random: boolean,
+            random_interval: number,
+            sticky: boolean,
+            sticky_label: string,
+            timeout: boolean,
+            timeout_after: number,
         }
 
         class Time {
-            hours: number;
-            minutes: number;
+            <<interface>> 
+            hours: number,
+            minutes: number,
         }
 
         class Graph {
-            display: boolean;
-            variable: string;
-            title: string;
-            blurb: string;
-            type: 'bar' | 'line';
-            max_points: number;
+            <<interface>> 
+            display: boolean,
+            variable: string,
+            title: string,
+            blurb: string,
+            type: 'bar' | 'line',
+            max_points: number,
         }
 
         class PvtBody {
-            type: 'pvt';
-            trials: number;
-            min_waiting: number;
-            max_waiting: number;
-            show: boolean;
-            max_reaction: number;
-            exit: boolean;
+            <<interface>> 
+            type: 'pvt',
+            trials: number,
+            min_waiting: number,
+            max_waiting: number,
+            show: boolean,
+            max_reaction: number,
+            exit: boolean,
         }
 
         class SurveyBody {
-            type: 'survey';
-            sections: Section[]
+            <<interface>> 
+            type: 'survey',
+            sections: Section[],
         }
 
         class Section {
-            id: string;
-            name: string;
-            shuffle: boolean;
-            questions: Question[];
+            <<interface>> 
+            id: string,
+            name: string,
+            shuffle: boolean,
+            questions: Question[],
         }
 
         class Question {
-            id: string;
-            text: string;
+            <<interface>> 
+            id: string,
+            text: string,
             body:
                 | Instruction
-                | Datetime
+                | DateTime
                 | Multi
                 | Text
                 | Slider
                 | Media
-                | Yesno
+                | YesNo
                 | External
-                | File;
-            required: boolean;
-            hide_id: string;
-            hide_value: boolean;
-            hide_if: boolean;
+                | File,
+            required: boolean,
+            hide_id: string,
+            hide_value: boolean,
+            hide_if: boolean,
         }
         
         class Instruction {
-            type: 'instruction';
+            <<interface>> 
+            type: 'instruction',
         }
 
         class YesNo {
-            type: 'yesno';
-            yes_text: string;
-            no_text: string;
+            <<interface>> 
+            type: 'yesno',
+            yes_text: string,
+            no_text: string,
         }
 
         class Text {
-            type: 'text';
-            subtype: 'short' | 'long' | 'numeric';
+            <<interface>> 
+            type: 'text',
+            subtype: 'short' | 'long' | 'numeric',
         }
 
         class DateTime {
-            type: 'datetime';
-            subtype: 'date' | 'time' | 'datetime';
+            <<interface>> 
+            type: 'datetime',
+            subtype: 'date' | 'time' | 'datetime',
         }
 
         class Slider {
-            type: 'slider';
-            min: number;
-            max: number;
-            hint_left: string;
-            hint_right: string;
+            <<interface>> 
+            type: 'slider',
+            min: number,
+            max: number,
+            hint_left: string,
+            hint_right: string,
         }
 
         class Multi {
-            type: 'multi';
-            radio: boolean;
-            modal: boolean;
-            options: string[];
-            shuffle: boolean;
+            <<interface>> 
+            type: 'multi',
+            radio: boolean,
+            modal: boolean,
+            options: string[],
+            shuffle: boolean,
         }
 
         class File {
-            type: 'file';
-            src: string;
-            file_name: string;
+            <<interface>> 
+            type: 'file',
+            src: string,
+            file_name: string,
         }
 
         class Media {
-            type: 'media';
-            subtype: 'image' | 'video' | 'audio';
-            src: string;
-            thumb: string;
+            <<interface>> 
+            type: 'media',
+            subtype: 'image' | 'video' | 'audio',
+            src: string,
+            thumb: string,
         }
 
         class External {
-            type: 'external';
-            src: string;
+            <<interface>> 
+            type: 'external',
+            src: string,
         }
 
 ```
