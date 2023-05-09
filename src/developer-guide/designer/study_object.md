@@ -7,26 +7,26 @@ Depending on the programming language, it has been implemented as `interface`(Ty
 
 ```mermaid
     classDiagram
-        Study "1" *-- "1..*" Module
-        Study "1" *-- "1" Properties
+        Study "1" -- "1..*" Module
+        Study "1" -- "1" Properties
 
-        Module "1" *-- "1" Alert
-        Alert "1" *-- "1..*" Time
-        Module "1" *-- "1" Graph
-        Module "1" --> "0..1" PvtBody
-        Module "1" --> "0..1" SurveyBody
+        Module "1" -- "1" Alerts
+        Module "1" -- "1" Graph
+        Module "1" -- "0..1" PvtBody
+        Module "1" -- "0..1" SurveyBody
+        Alerts "1" -- "1..*" Time
 
-        SurveyBody "1" --> "1..*" Section
-        Section "1" --> "1..*" Question
-        Question "1" --> "0..1" Instruction
-        Question --> "0..1" YesNo
-        Question --> "0..1" Text
-        Question --> "0..1" DateTime
-        Question --> "0..1" Slider
-        Question --> "0..1" Multi
-        Question --> "0..1" File
-        Question --> "0..1" Media
-        Question --> "0..1" External
+        SurveyBody "1" -- "1..*" Section
+        Section "1" -- "1..*" Question
+        Question "1" -- "0..1" Instruction
+        Question -- "0..1" YesNo
+        Question -- "0..1" Text
+        Question -- "0..1" DateTime
+        Question -- "0..1" Slider
+        Question -- "0..1" Multi
+        Question -- "0..1" File
+        Question -- "0..1" Media
+        Question -- "0..1" External
 
         class Study {
             <<interface>> 
@@ -40,7 +40,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
             name: string,
             submit_text: string,
             condition: string,
-            alerts: Alert[],
+            alerts: Alerts,
             graph: Graph,
             id: string,
             unlock_after: string[],
@@ -65,7 +65,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
             cache: boolean,
         }
 
-        class Alert {
+        class Alerts {
             <<interface>> 
             title: string,
             message: string,
