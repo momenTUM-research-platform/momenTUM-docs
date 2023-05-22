@@ -1,6 +1,10 @@
 # momenTUM Designer
-<!--short summary of what the designer was build with and how to start off with development-->
-The Designer was build using the following technologies:
+
+The Designer is a simple GUI, which helps you create valid studies for the momenTUM platform. Its core features include
+- creating studies
+- providing a link which points to your study 
+
+### Technologies
 - [TypeScript](https://www.typescriptlang.org/) - programming language
 - [React](https://react.dev/) - frontend library
     - [ReactFlow](https://reactflow.dev/) - study graph
