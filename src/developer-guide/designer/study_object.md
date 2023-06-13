@@ -1,7 +1,6 @@
 # Study Object
 
-The study object is a complex object with key value pairs according to a certain protocol. The protocol is modelled using a class diagram.
-Depending on the programming language, it has been implemented as `interface`(TypeScript) and `Struct` (Rust).
+The study object is a JSON object with key value pairs according to a certain schema. The schema is modelled using a class diagram.
 
 ## mermaid diagram
 
@@ -29,13 +28,13 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         Question -- "0..1" External
 
         class Study {
-            <<interface>> 
+            <<interface>>
             properties: Properties,
             modules: Module[],
         }
 
         class Module {
-            <<interface>> 
+            <<interface>>
             type: 'pvt' | 'survey',
             name: string,
             submit_text: string,
@@ -49,7 +48,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         }
 
         class Properties {
-            <<interface>> 
+            <<interface>>
             study_id: string,
             study_name: string,
             instructions: string,
@@ -66,7 +65,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         }
 
         class Alerts {
-            <<interface>> 
+            <<interface>>
             title: string,
             message: string,
             start_offset: number,
@@ -81,13 +80,13 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         }
 
         class Time {
-            <<interface>> 
+            <<interface>>
             hours: number,
             minutes: number,
         }
 
         class Graph {
-            <<interface>> 
+            <<interface>>
             display: boolean,
             variable: string,
             title: string,
@@ -97,7 +96,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         }
 
         class PvtBody {
-            <<interface>> 
+            <<interface>>
             type: 'pvt',
             trials: number,
             min_waiting: number,
@@ -108,13 +107,13 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         }
 
         class SurveyBody {
-            <<interface>> 
+            <<interface>>
             type: 'survey',
             sections: Section[],
         }
 
         class Section {
-            <<interface>> 
+            <<interface>>
             id: string,
             name: string,
             shuffle: boolean,
@@ -122,7 +121,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         }
 
         class Question {
-            <<interface>> 
+            <<interface>>
             id: string,
             text: string,
             body:
@@ -140,33 +139,33 @@ Depending on the programming language, it has been implemented as `interface`(Ty
             hide_value: boolean,
             hide_if: boolean,
         }
-        
+
         class Instruction {
-            <<interface>> 
+            <<interface>>
             type: 'instruction',
         }
 
         class YesNo {
-            <<interface>> 
+            <<interface>>
             type: 'yesno',
             yes_text: string,
             no_text: string,
         }
 
         class Text {
-            <<interface>> 
+            <<interface>>
             type: 'text',
             subtype: 'short' | 'long' | 'numeric',
         }
 
         class DateTime {
-            <<interface>> 
+            <<interface>>
             type: 'datetime',
             subtype: 'date' | 'time' | 'datetime',
         }
 
         class Slider {
-            <<interface>> 
+            <<interface>>
             type: 'slider',
             min: number,
             max: number,
@@ -175,7 +174,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         }
 
         class Multi {
-            <<interface>> 
+            <<interface>>
             type: 'multi',
             radio: boolean,
             modal: boolean,
@@ -184,14 +183,14 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         }
 
         class File {
-            <<interface>> 
+            <<interface>>
             type: 'file',
             src: string,
             file_name: string,
         }
 
         class Media {
-            <<interface>> 
+            <<interface>>
             type: 'media',
             subtype: 'image' | 'video' | 'audio',
             src: string,
@@ -199,7 +198,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
         }
 
         class External {
-            <<interface>> 
+            <<interface>>
             type: 'external',
             src: string,
         }
