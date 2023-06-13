@@ -1,164 +1,215 @@
 # Component Overview
 
-- Pages
-    - Home
-    - Progress
-    - Settings
-    - Pvt
-    - Scanner
-    - Survey
-- Services
-    - [barcode](#barcode-service)
-    - [loading](#loading-service)
-    - [notification](#notification-service)
-    - [storage](#storage-service)
-    - [study-task](#study-task-service)
-    - [survey-cache](#survey-cache-service)
-    - [survey-data](#survey-data-service)
-    - [uuid](#uuid-service)
+-   Pages
+    -   Home
+    -   Progress
+    -   Settings
+    -   Pvt
+    -   Scanner
+    -   Survey
+-   Services
+    -   [barcode](#barcode-service)
+    -   [loading](#loading-service)
+    -   [notification](#notification-service)
+    -   [storage](#storage-service)
+    -   [study-task](#study-task-service)
+    -   [survey-cache](#survey-cache-service)
+    -   [survey-data](#survey-data-service)
+    -   [uuid](#uuid-service)
 
 # Barcode service
 
-- Methods
-    - startScan
-    - checkPermission
-    - didUserGrantPermission
-    - stopScan
+-   Methods
+    -   startScan
+    -   checkPermission
+    -   didUserGrantPermission
+    -   stopScan
 
 # Loading service
 
-- Methods
-    - dismiss
-    - present
+-   Methods
 
-- Attributes
-    - isLoading
-    - isCaching
+    -   dismiss
+    -   present
+
+-   Attributes
+    -   isLoading
+    -   isCaching
 
 # Notification service
 
-- Injections (constructor params)
-    - storage
-    - studyTasksService
+-   Injections (constructor params)
 
-- Methods
-    - createChannel
-    - deleteChannel
-    - listChannels
-    - fireQueuedEvents
-    - addListenerOnClick
-    - showLocalNotifications
-    - scheduleNotification
-    - cancelAll
-    - getPending
-    - requestPermissions
-    - setNext30Notifications
+    -   storage
+    -   studyTasksService
+
+-   Methods
+    -   createChannel
+    -   deleteChannel
+    -   listChannels
+    -   fireQueuedEvents
+    -   addListenerOnClick
+    -   showLocalNotifications
+    -   scheduleNotification
+    -   cancelAll
+    -   getPending
+    -   requestPermissions
+    -   setNext30Notifications
 
 # Storage service
 
-- Injections (constructor params)
-    - storage
+-   Injections (constructor params)
 
-- Methods
-    - init
-    - set
-    - get
-    - keys
-    - removeItem
-    - clear
+    -   storage
+
+-   Methods
+    -   init
+    -   set
+    -   get
+    -   keys
+    -   removeItem
+    -   clear
 
 # Study-task service
 
-- Injections (constructor params)
-    - storageService
-    - loadingService
+-   Injections (constructor params)
 
-- Methods
-    - generateStudyTasks
-    - getAllTasks
-    - getTaskDisplayList
-    - checkTaskIsUnlocked
+    -   storageService
+    -   loadingService
+
+-   Methods
+    -   generateStudyTasks
+    -   getAllTasks
+    -   getTaskDisplayList
+    -   checkTaskIsUnlocked
 
 # Survey-cache service
 
-- Attributes
-    - win
-    - mediaToCache
-    - videoThumbnailsToCache
-    - localMediaURLs
-    - localThumbnailURLs
-    - mediaCount
-    - mediaDownloadedCount
+-   Attributes
 
-- Injections (constructor params)
-    - file
-    - storage
-    - loadingService
+    -   win
+    -   mediaToCache
+    -   videoThumbnailsToCache
+    -   localMediaURLs
+    -   localThumbnailURLs
+    -   mediaCount
+    -   mediaDownloadedCount
 
-- Methods
-    - downloadFile
-    - getMediaURLs
-    - cacheAllMedia
-    - downloadAllMedia
-    - checkIfFinished
-    - updateMediaURLsInStudy
+-   Injections (constructor params)
+
+    -   file
+    -   storage
+    -   loadingService
+
+-   Methods
+    -   downloadFile
+    -   getMediaURLs
+    -   cacheAllMedia
+    -   downloadAllMedia
+    -   checkIfFinished
+    -   updateMediaURLsInStudy
 
 # Survey-data service
 
-- Injections (constructor params)
-    - httpClient
-    - storage
-    - platform
-    - uuidService
-    - studyTasksService
+-   Injections (constructor params)
 
-- Methods
-    - getRemoteData
-    - getFromLocalStorage
-    - saveToLocalStorage
-    - sendSurveyDataToServer
-    - logPageVisitToServer
-    - uploadPendingData
-    - attemptHttpPost
+    -   httpClient
+    -   storage
+    -   platform
+    -   uuidService
+    -   studyTasksService
+
+-   Methods
+    -   getRemoteData
+    -   getFromLocalStorage
+    -   saveToLocalStorage
+    -   sendSurveyDataToServer
+    -   logPageVisitToServer
+    -   uploadPendingData
+    -   attemptHttpPost
 
 # uuid service
 
-- Methods
-    - generateUUID
+-   Methods
+    -   generateUUID
 
-## Survey Page
+# Survey Page
 
-- Injections (constructor parameters)
-    - route
-    - storage
-    - domSanitizer
-    - navController
-    - studyTasksService
-    - surveyDataService
-    - toastController
-    - ngZone
-- Attributes
-    - submit_text
-    - current_section
-    - num_sections
-    - current_section_name
-    - study
-    - survey
-    - questions
-    - tasks
-    - task_id
-    - task_index
-    - module_index
-    - module_name
+-   Injections (constructor parameters)
+    -   route
+    -   storage
+    -   domSanitizer
+    -   navController
+    -   studyTasksService
+    -   surveyDataService
+    -   toastController
+    -   ngZone
+-   Attributes
 
-- Methods
-    - ngOnInit
-    - back
-    - setUpQuestionVariables
-    - setAnswer
-    - changeCheckStatus
-    - openExternalFile
-    - toggleDynamicQuestions
-    - submit
-    - showToast
-    - shuffle
+    -   submit_text
+    -   current_section
+    -   num_sections
+    -   current_section_name
+    -   study
+    -   survey
+    -   questions
+    -   tasks
+    -   task_id
+    -   task_index
+    -   module_index
+    -   module_name
+
+-   Methods
+    -   ngOnInit
+    -   back
+    -   setUpQuestionVariables
+    -   setAnswer
+    -   changeCheckStatus
+    -   openExternalFile
+    -   toggleDynamicQuestions
+    -   submit
+    -   showToast
+    -   shuffle
+
+# Home page
+
+-   Injections (constructor attributes)
+
+    -   surveyDataService
+    -   notificationsService
+    -   surveyCacheService
+    -   studyTasksService
+    -   uuidService
+    -   navController
+    -   route
+    -   router
+    -   platform
+    -   loadingService
+    -   alertController
+    -   storageService
+    -   translate
+
+-   Attributes
+
+    -   resumeEvent
+    -   hideEnrolOptions
+    -   isEnrolledInStudy
+    -   study
+    -   task_list
+    -   darkMode
+
+-   Methods
+    -   toggleTheme
+    -   ngOnInit
+    -   ionViewWillEnter
+    -   ionViewWillLeave
+    -   scanQR
+    -   attemptToDownloadStudy
+    -   enterURL
+    -   enterStudyID
+    -   enrolInStudy
+    -   loadStudyDetails
+    -   displayEnrolError
+    -   displayBarcodeError
+    -   sortTasksList
+    -   doRefresh
