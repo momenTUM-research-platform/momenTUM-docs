@@ -1,6 +1,6 @@
 # Architecture
 
-## src folder structure
+## general folder structure
 - src
     - app
         - models
