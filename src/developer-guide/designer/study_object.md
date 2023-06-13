@@ -1,6 +1,6 @@
 # Study Object
 
-The study object is a JSON object with key value pairs according to a certain schema. The schema is modelled using a class diagram.
+The study object is a JSON object with key value pairs according to a certain schema. The schema is modelled using a typescript interface diagram.
 
 ## mermaid diagram
 
