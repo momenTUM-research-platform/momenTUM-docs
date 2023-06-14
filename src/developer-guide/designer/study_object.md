@@ -12,11 +12,11 @@ Depending on the programming language, it has been implemented as `interface`(Ty
 
         Module "1" -- "1" Alerts
         Module "1" -- "1" Graph
-        Module "1" -- "0..1" PvtBody
-        Module "1" -- "0..1" SurveyBody
+        Module "1" -- "0..1" Pvt
+        Module "1" -- "0..1" Survey
         Alerts "1" -- "1..*" Time
 
-        SurveyBody "1" -- "1..*" Section
+        Survey "1" -- "1..*" Section
         Section "1" -- "1..*" Question
         Question "1" -- "0..1" Instruction
         Question -- "0..1" YesNo
@@ -36,16 +36,13 @@ Depending on the programming language, it has been implemented as `interface`(Ty
 
         class Module {
             <<interface>> 
-            type: 'pvt' | 'survey',
-            name: string,
-            submit_text: string,
-            condition: string,
-            alerts: Alerts,
-            graph: Graph,
-            id: string,
-            unlock_after: string[],
-            shuffle: boolean,
-            body: SurveyBody | PvtBody,
+            name: string;
+            condition: string;
+            alerts: Alerts;
+            graph: Graph;
+            id: string;
+            unlock_after: string[];
+            params: Survey | Pvt;
         }
 
         class Properties {
@@ -96,9 +93,10 @@ Depending on the programming language, it has been implemented as `interface`(Ty
             max_points: number,
         }
 
-        class PvtBody {
+        class Pvt {
             <<interface>> 
             type: 'pvt',
+            id: string,
             trials: number,
             min_waiting: number,
             max_waiting: number,
@@ -107,9 +105,13 @@ Depending on the programming language, it has been implemented as `interface`(Ty
             exit: boolean,
         }
 
-        class SurveyBody {
+        class Survey {
             <<interface>> 
             type: 'survey',
+            submit_text: string,
+            id: string,
+            name: string,
+            shuffle: boolean,
             sections: Section[],
         }
 
@@ -125,7 +127,7 @@ Depending on the programming language, it has been implemented as `interface`(Ty
             <<interface>> 
             id: string,
             text: string,
-            body:
+            type:
                 | Instruction
                 | DateTime
                 | Multi
@@ -203,5 +205,4 @@ Depending on the programming language, it has been implemented as `interface`(Ty
             type: 'external',
             src: string,
         }
-
 ```
