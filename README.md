@@ -5,7 +5,7 @@ The website for the documentation is: <br>
 [MomunTUM Docs](https://docs.momentumresearch.eu/)
 
 The banner url: <br>
-![momenTUM banner](src/resources/banner.png)
+![momenTUM banner](src/resources/images/banner.png)
 
 ## About
 This repository contains the documentation of the momenTUM Research Platform. The documentation is written using [mdBook](https://rust-lang.github.io/mdBook/).
