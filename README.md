@@ -27,7 +27,7 @@ The momenTUM Research Platform is developed at the [Technical University of Muni
 cargo install mdbook-mermaid
 ```
 2. Then let ```mdbook-mermaid``` add the required files and configuration:
-```mermaid
+```
 mdbook-mermaid install path/to/your/book
 ```
 3. This will add the following configuration to your ```book.toml```:
