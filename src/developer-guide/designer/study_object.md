@@ -110,7 +110,6 @@ Depending on the programming language, it has been implemented as `interface`(Ty
             type: 'survey',
             submit_text: string,
             id: string,
-            name: string,
             shuffle: boolean,
             sections: Section[],
         }
