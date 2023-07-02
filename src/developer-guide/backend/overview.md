@@ -17,3 +17,14 @@ We recommend getting familiar with these technologies before developing for this
 - [Deployment](./deployment.md)
 - [Interfaces](./interfaces.md)
 - [Contributing](./contributing.md)
+
+
+ This is the documentation for the study designer for the momenTUM project.
+
+ It encompasses technical documentation for the API and frontend of the study designer.
+
+ Examples of using the API can be found here: <https://documenter.getpostman.com/view/13190321/2s8Z6zzBti>
+
+ 
+
+

@@ -6,10 +6,9 @@ src = "src"
 title = "momenTUM Research Platform"
 
 [output.html]
-additional-css = ["custom.css"]
+additional-css = ["css/custom.css"]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
 
-[preprocessor]
 
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
